@@ -22,3 +22,5 @@ Proof: include screenshots of the repo
   being cloned to your local system
 
 -the above will be added to the pushed project. 
+<img width="572" alt="Screen Shot 2021-09-04 at 2 43 50 PM" src="https://user-images.githubusercontent.com/27076383/132105073-e2f32630-b9a3-4ac8-acd1-f267fa2fd44e.png">
+
