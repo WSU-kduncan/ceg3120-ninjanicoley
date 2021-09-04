@@ -3,7 +3,9 @@ Project 1
 Setup: how to initialize a repo and all other setup steps (users, permissions, keys)
 Make sure you have a git account to start with
 Start with creating the key pair for the instance on AWS
+generate keys for github
 change the permissions by using chmod 600 /path/to/private/key
+create a .ssh/config file 
 then you connect to the instance using ssh -i /path/to/private/key ubuntu@ElasticIP 
 
 
