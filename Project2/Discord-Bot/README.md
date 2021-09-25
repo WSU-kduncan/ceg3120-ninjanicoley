@@ -15,7 +15,8 @@ Usage
 -with your changes to the code in place, describe
 -what commands you can type in your Discord server
 -what response this will provide (from your bot)
+
 Research
--you may have realized that it is lame that it only runs when you run the program.
--In the real world, things are "always on", not waiting for Bob to turn his PC on and make sure the program is running.
--Research some possible solutions that would solve this, and discuss why you think it would work.
+A possible way to not have to manually run the bot each time is to have it run 24/7. To do this, you would need to go with a third-party Virtual Private Server (VPS). Since it is virtual, it can run 24/7. 
+A good source on how to do this in under 1 hour is: 
+https://www.writebots.com/discord-bot-hosting/
