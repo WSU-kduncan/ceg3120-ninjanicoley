@@ -12,9 +12,7 @@ In order to run the code, some packages that need to be installed include dotenv
 and "pip3 install -U discord.py"
 
 Usage
--with your changes to the code in place, describe
--what commands you can type in your Discord server
--what response this will provide (from your bot)
+You can make a discord bot play music using rhythm bot and it will play music linked to youtube or you can have a discord bot that displays images such as corgis when you type corgime in the chat. 
 
 Research
 A possible way to not have to manually run the bot each time is to have it run 24/7. To do this, you would need to go with a third-party Virtual Private Server (VPS). Since it is virtual, it can run 24/7. 
