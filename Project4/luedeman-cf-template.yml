@@ -21,7 +21,7 @@ Mappings:
   AWSRegionUbuntu: # AMI for Ubuntu server in each supported region 
     us-east-1:   # N. Virginia
       PV64: NOT_SUPPORTED
-      HVM64: ami-07d0cf3af28718ef8
+      HVM64: ami-09e67e426f25ce0d7 # Ubuntu Server 20.04 LTS (HVM) SSD Vol Type 
       HVMG2: NOT_SUPPORTED
 Resources:
   VPC:
@@ -115,7 +115,7 @@ Resources:
       Tags:
         - Key: Application
           Value: !Ref 'AWS::StackId'
-        - Key: Name
+        - Key: CF-instance
           Value: CEG2350 Ubuntu
       NetworkInterfaces:
         - GroupSet:
