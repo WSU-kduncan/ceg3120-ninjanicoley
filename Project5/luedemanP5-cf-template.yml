@@ -96,7 +96,7 @@ Resources:
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
-          CidrIp: 10.0.0.0/16 # VPC as a whole.  EC 10.0.0.0/24
+          CidrIp: 10.0.0.0/24 # VPC as a whole.  
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
@@ -104,7 +104,7 @@ Resources:
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
-          CidrIp: 130.108.15.32/32  # Replace with home / trusted public IP
+          CidrIp: 74.140.198.202/32  # Home IP address
           # Need more rules for port 80
   # This defines one instance.  Make two more instances based on this (but no elastic IP)        
   PublicUbuntuInstance:

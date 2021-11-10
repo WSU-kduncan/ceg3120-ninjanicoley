@@ -1,4 +1,8 @@
 Part 1
+1. Link below was used for the cf-template (luedemanP5-cf-template.yml)
+https://github.com/pattonsgirl/Fall2021-CEG3120/blob/main/Projects/Project5/cf-template.yml
+
+
 
 Part 2 - Setup Load Balancing TODOs
 1. Description of how /etc/hosts file is configured
