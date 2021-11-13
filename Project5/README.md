@@ -9,6 +9,21 @@ Part 2 - Setup Load Balancing TODOs
 
 2. Document how to SSH in between the systems utilizing their private IPs. 
 
+To ssh between systems, we must set up the ssh capabiltiies. 
+Start with making the ssh directory and changing the permissions 
+Then make the ssh config file within that directory. 
+In the config file we need to add the hostname and the ssh option. The option could be a port or username. 
+We want the general flow of the file to be something like this:
+
+Host dev
+    HostName dev.example.com
+    User john
+    Port 2322
+
+You can add both web servers to the same config file. 
+In order to make this work, we do need to have the public key on all instances (done by AWS) and we need to add our private key to the proxy server. 
+Once that is all said and done, we can ssh in (ssh dev or whatever we set it to).
+
 3. HAProxy config and documentation
 
 We installed haproxy with apt-get install haproxy in the cf-template. 
@@ -23,6 +38,7 @@ We also want to make sure that balance is set to roundrobbin. This is how the HA
 Resources:
 https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/
 https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts
+Duncan's course material
 
 4. Webserver 1 & 2 config and documentation
 
@@ -47,6 +63,7 @@ If that all goes according to plan, we run sudo systemctl restart apache2.
 
 Resource used: 
 https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
+Duncan's course material. 
 
 5. When connecting to the proxy server, take 2 screenshots:
 a. one screenshot that shows content from "server 1".
