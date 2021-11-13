@@ -67,5 +67,7 @@ Duncan's course material.
 
 5. When connecting to the proxy server, take 2 screenshots:
 a. one screenshot that shows content from "server 1".
+<img width="606" alt="Screen Shot 2021-11-12 at 11 02 30 PM" src="https://user-images.githubusercontent.com/27076383/141606466-3de0a5a0-bd8e-4053-8c56-23313ef2b0e3.png">
 
 b. one screenshot that shows content from "server 2".
+<img width="508" alt="Screen Shot 2021-11-12 at 11 22 03 PM" src="https://user-images.githubusercontent.com/27076383/141606469-6f11e91c-fbd1-4586-a3e4-4b32453ef7a7.png">
