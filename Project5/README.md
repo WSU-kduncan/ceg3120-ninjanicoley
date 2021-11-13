@@ -10,11 +10,19 @@ Part 2 - Setup Load Balancing TODOs
 2. Document how to SSH in between the systems utilizing their private IPs. 
 
 3. HAProxy config and documentation
-a. How to install package
-b. What file(s) were modified and their location. 
-c. What config were set (if any).
-d. How to restart the service after configuration change.
-e. Resources used (websites).
+
+We installed haproxy with apt-get install haproxy in the cf-template. 
+After that we check to make sure it was installed. From there I cd into /etc/haproxy to see what files exist. Since we will be making changes to the haproxy.cfg file, we make a copy of it and call it "old" to revert to if something happens. 
+We then use vim to enter into the file to make our changes. 
+In the global area we change the mac connection to 50000, make the user haproxy, and group haproxy, along with making the stats socket have user haproxy and group haproxy. 
+We changed the timeout to connect for 10s, the client for 30s and the server 30s. 
+We bind our private proxy IP and port 80 under the frontend section along with making the default go to the backend. 
+The backend is were we tie the web servers to along with port 80. 
+We also want to make sure that balance is set to roundrobbin. This is how the HAproxy will select the serverto respond to the request. Roundrobbin allows us to pick the next server and start over from the top. 
+
+Resources:
+https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/
+https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts
 
 4. Webserver 1 & 2 config and documentation
 
