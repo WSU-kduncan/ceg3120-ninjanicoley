@@ -17,15 +17,30 @@ d. How to restart the service after configuration change.
 e. Resources used (websites).
 
 4. Webserver 1 & 2 config and documentation
-a. How to install package
-b. What file(s) were modified and their location. 
-c. What config were set (if any).
-d. How to restart the service after configuration change.
-e. Resources used (websites).
+
+To configure the webserver, we must install apache2 with sudo apt install apache2.
+Check the status of apache2 by running sudo systemctl status apache2.
+We then make the directory to store everything: sudo mkdir/var/www/hostnameChoice (I used my proxy IP)
+Assign ownership with sudo chown -R $USER:$USER /var/www/hostnameChoice
+We also have to change those permissions with chmod -R 755 /var/www/hostnameChoice
+and then add the index.html file to that directory. 
+We run sudo nano /etc/apache2/sites-available/hostnameChoice.conf here and paste in the following: 
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    ServerName hostnameChoice
+    ServerAlias hostnameChoice
+    DocumentRoot /var/www/hostnameChoice
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+Now that we have that done, we enable it with sudo a2ensite hostnameChoice.conf, disable sudo a2dissite 000-default.conf, reload if you have to, and then sudo apache2ctl configtest to test the configuration. 
+If that all goes according to plan, we run sudo systemctl restart apache2. 
+
+Resource used: 
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
 
 5. When connecting to the proxy server, take 2 screenshots:
 a. one screenshot that shows content from "server 1".
 
 b. one screenshot that shows content from "server 2".
-
-6. (Optional) - link to proxy so that it's clickable.
